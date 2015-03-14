@@ -1,28 +1,30 @@
 program HelloWorld;
 
-var notglobal:integer;
+var global1, global2, global3:integer;
+var p1, p2, p3:integer;
 var x:boolean;
 var y:boolean;
 function abs(num,num1:integer; b:boolean):integer;
 var temp, temp1:integer;
 begin
     if num < 0 then
-        num:= num*1
+        abs:= num*1
     else
-       num:=num;
+       abs:=num;
 end;
 procedure test(var p1:integer);
 var localint : integer;
-var notglobal:integer;
 var x:boolean;
 var y:boolean;
 begin
-    global:=0;
-    localint:=0;
-    p1:=p2 + p3;
-    p2 := localint;
+    global1:=1;
+    global2:=2;
+	localint:=3;
+	global3:=global1+global2;
+	p2 := localint;
     p3 := localint;
+    p1:=p2 + p3;
 end;
 begin
-	global:=5;
+	global1:=5;
 end.

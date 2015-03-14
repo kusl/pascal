@@ -626,6 +626,9 @@ namespace KPascal
 			{
 				//this is the program name 
 				lexer.getToken(token);
+				symbol.Table[token.value].size = 0;
+				symbol.Table[token.value].isMethod = false;
+				symbol.Table[token.value].offset = GlobalOffset;
 				//this is the semi colon 
 				lexer.getToken(token);
 				if (token.value == ";")
